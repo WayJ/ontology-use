@@ -84,7 +84,7 @@
 | M9 | 0.0000 | 8 | 8 |
 | M10 | 0.1250 | 8 | 7 |
 
-行数：88（11×8）。部分失败为 empty `message.content`（thinking 占满 completion）；默认 `max_completion_tokens=2048`。复现：设 key 后重跑上述命令，引用新的 `results/llm-*/`，勿手填旧数。
+行数：88（11×8）。部分失败为 empty `message.content`（thinking 占满 completion）；当时默认 `max_completion_tokens=2048`（代码现已默认 **4096**，仍可用环境变量覆盖）。**prompt/IRI 调优后请再跑** `npm run eval -- --reasoner=llm` 写入新的 `results/llm-<stamp>/`，再改本节数字；勿用旧表冒充调优后成绩，勿手填。
 
 ## 4.5 后续
 

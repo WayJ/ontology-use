@@ -1,4 +1,5 @@
 import type { Answer, Task } from '@ontology-use/core'
+import { expandCompactIri, expandValue, mergePrefixMap } from './iri.js'
 
 export type ScorePair = { ok: boolean; score: number }
 
@@ -58,21 +59,32 @@ function scoreFields(
   return { ok: score === 1, score }
 }
 
-export function scoreAnswer(task: Task, answer: Answer): ScorePair {
+export function scoreAnswer(
+  task: Task,
+  answer: Answer,
+  prefixMap?: Record<string, string>,
+): ScorePair {
+  const map = mergePrefixMap(prefixMap)
   switch (task.type) {
     case 'exact': {
       const pred = asString(answer.value)
       if (pred === null || typeof task.gold !== 'string') {
         return { ok: false, score: 0 }
       }
-      return scoreExact(task.gold, pred)
+      return scoreExact(
+        expandCompactIri(task.gold, map),
+        expandCompactIri(pred, map),
+      )
     }
     case 'set': {
       const pred = asStringArray(answer.value)
       if (pred === null || !Array.isArray(task.gold)) {
         return { ok: false, score: 0 }
       }
-      return scoreSet(task.gold, pred)
+      return scoreSet(
+        expandValue(task.gold, map) as string[],
+        expandValue(pred, map) as string[],
+      )
     }
     case 'fields': {
       const pred = asFields(answer.value)
@@ -84,7 +96,10 @@ export function scoreAnswer(task: Task, answer: Answer): ScorePair {
       ) {
         return { ok: false, score: 0 }
       }
-      return scoreFields(task.gold, pred)
+      return scoreFields(
+        expandValue(task.gold, map) as Record<string, string>,
+        expandValue(pred, map) as Record<string, string>,
+      )
     }
     default:
       return { ok: false, score: 0 }

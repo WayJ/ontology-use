@@ -1,0 +1,6 @@
+{
+  "name": "@ontology-use/packs-public-foaf-lite",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Tiny FOAF-inspired public pack (example.org IRIs only)"
+}

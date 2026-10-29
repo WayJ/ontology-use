@@ -1,0 +1,10 @@
+{
+  "id": "foaf-t003",
+  "type": "fields",
+  "question": "Propose an ActionSDK Introduce action linking http://example.org/foaf-lite/alice to http://example.org/foaf-lite/carol via knows",
+  "gold": {
+    "action": "Introduce",
+    "objectIds": "http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol"
+  },
+  "ontologyRefs": ["ontology/foaf-lite.ttl"]
+}

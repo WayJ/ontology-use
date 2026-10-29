@@ -5,6 +5,7 @@ import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createMockReasoner } from '@ontology-use/reasoners-mock'
 import { allMethods } from '@ontology-use/methods'
+import { loadEnabledPacks } from './loadPacks.js'
 import { runEval } from './eval.js'
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../../..')
@@ -21,7 +22,16 @@ describe('e2e mock eval', () => {
     await rm(outDir, { recursive: true, force: true })
   })
 
-  it('produces result rows for all 11 methods M0–M10', async () => {
+  it('loads public-mini and foaf-lite; results for all 11 methods', async () => {
+    const packs = await loadEnabledPacks(packsRoot)
+    const packIds = packs.map((p) => p.packId).sort()
+    expect(packIds).toContain('public-mini')
+    expect(packIds).toContain('public-foaf-lite')
+    expect(packs.some((p) => p.packId === 'industrial-park')).toBe(false)
+
+    const taskCount = packs.reduce((n, p) => n + p.tasks.length, 0)
+    expect(taskCount).toBeGreaterThanOrEqual(8)
+
     const methods = allMethods({ strictMock: false })
     expect(methods).toHaveLength(11)
 
@@ -32,6 +42,8 @@ describe('e2e mock eval', () => {
       outDir,
     })
 
+    expect(results.length).toBe(methods.length * taskCount)
+
     const methodIds = [...new Set(results.map((r) => r.methodId))].sort(
       (a, b) => a.localeCompare(b, undefined, { numeric: true }),
     )
@@ -41,7 +53,7 @@ describe('e2e mock eval', () => {
 
     const md = await readFile(join(outDir, 'latest.md'), 'utf8')
     for (const id of methodIds) {
-      expect(md).toContain(id)
+      expect(md).toContain(`| ${id} |`)
     }
     JSON.parse(await readFile(join(outDir, 'latest.json'), 'utf8'))
   })

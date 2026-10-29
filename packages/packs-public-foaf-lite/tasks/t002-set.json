@@ -1,0 +1,11 @@
+{
+  "id": "foaf-t002",
+  "type": "set",
+  "question": "List individuals of class http://example.org/foaf-lite/Person",
+  "gold": [
+    "http://example.org/foaf-lite/alice",
+    "http://example.org/foaf-lite/bob",
+    "http://example.org/foaf-lite/carol"
+  ],
+  "ontologyRefs": ["ontology/foaf-lite.ttl"]
+}

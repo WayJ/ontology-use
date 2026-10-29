@@ -1,0 +1,30 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fl: <http://example.org/foaf-lite/> .
+
+# FOAF-inspired shapes only; IRIs are example.org, not xmlns.com/foaf.
+
+fl:Person a owl:Class ;
+  rdfs:label "Person" .
+
+fl:name a owl:DatatypeProperty ;
+  rdfs:domain fl:Person ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "name" .
+
+fl:knows a owl:ObjectProperty ;
+  rdfs:domain fl:Person ;
+  rdfs:range fl:Person ;
+  rdfs:label "knows" .
+
+fl:alice a fl:Person ;
+  fl:name "Alice" ;
+  fl:knows fl:bob .
+
+fl:bob a fl:Person ;
+  fl:name "Bob" ;
+  fl:knows fl:carol .
+
+fl:carol a fl:Person ;
+  fl:name "Carol" .

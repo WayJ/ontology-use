@@ -36,6 +36,7 @@ npm run eval -w @ontology-use/harness -- --reasoner=llm   # must fail; no pollut
 - `packages/reasoners-mock` — deterministic reasoner
 - `packages/reasoners-llm` — phase-1 stub (throws on `complete`)
 - `packages/packs-public-mini` — default-enabled mini pack
+- `packages/packs-public-foaf-lite` — FOAF-inspired lite pack (enabled)
 - `packages/packs-industrial-park` — optional add-on (`enabled: false`, not in default eval)
 - `packages/methods` — M0–M10 runners
 - `packages/harness` — load → run → score → write

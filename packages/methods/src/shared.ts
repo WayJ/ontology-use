@@ -49,13 +49,35 @@ export function schemaSummary(ontology: string): string {
     .join('\n')
 }
 
-export function parseReasonerOutput(raw: string, task: Task): Answer['value'] {
+export function stripMarkdownFence(raw: string): string {
   const trimmed = raw.trim()
-  if (task.type === 'exact') return trimmed
+  const m = trimmed.match(/^```(?:json)?\s*\r?\n?([\s\S]*?)\r?\n?```$/i)
+  return m ? m[1]!.trim() : trimmed
+}
+
+export function parseReasonerOutput(raw: string, task: Task): Answer['value'] {
+  const trimmed = stripMarkdownFence(raw)
+  if (task.type === 'exact') {
+    // Unwrap a JSON string literal once (double-quoted). Do not unwrap objects/arrays.
+    if (trimmed.startsWith('"')) {
+      try {
+        const parsed = JSON.parse(trimmed) as unknown
+        if (typeof parsed === 'string') return parsed
+      } catch {
+        // fall through to trimmed
+      }
+    }
+    return trimmed
+  }
   try {
     const parsed = JSON.parse(trimmed) as unknown
     if (task.type === 'set' && Array.isArray(parsed)) return parsed.map(String)
-    if (task.type === 'fields' && parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+    if (
+      task.type === 'fields' &&
+      parsed &&
+      typeof parsed === 'object' &&
+      !Array.isArray(parsed)
+    ) {
       const out: Record<string, string> = {}
       for (const [k, v] of Object.entries(parsed as Record<string, unknown>)) {
         out[k] = String(v)

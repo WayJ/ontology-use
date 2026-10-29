@@ -2,6 +2,9 @@
   "id": "t002",
   "type": "set",
   "question": "List individuals of class http://example.org/ou/Person",
-  "gold": ["http://example.org/ou/alice"],
+  "gold": [
+    "http://example.org/ou/alice",
+    "http://example.org/ou/bob"
+  ],
   "ontologyRefs": ["ontology/mini.ttl"]
 }

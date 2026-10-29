@@ -1,5 +1,5 @@
 import { readdir, readFile, stat } from 'node:fs/promises'
-import { join } from 'node:path'
+import { isAbsolute, join, resolve } from 'node:path'
 import type { Task } from '@ontology-use/core'
 
 export type LoadedPack = {
@@ -25,6 +25,11 @@ function isTask(value: unknown): value is Task {
   )
 }
 
+function resolveOntologyRefs(packDir: string, refs: string[] | undefined): string[] | undefined {
+  if (!refs?.length) return refs
+  return refs.map((ref) => (isAbsolute(ref) ? ref : resolve(packDir, ref)))
+}
+
 async function loadPackDir(packDir: string): Promise<LoadedPack | null> {
   const manifestPath = join(packDir, 'manifest.json')
   let raw: string
@@ -45,7 +50,10 @@ async function loadPackDir(packDir: string): Promise<LoadedPack | null> {
       if (!isTask(task)) {
         throw new Error(`Invalid task in ${join(tasksDir, file)}`)
       }
-      tasks.push(task)
+      tasks.push({
+        ...task,
+        ontologyRefs: resolveOntologyRefs(packDir, task.ontologyRefs),
+      })
     }
   } catch (err) {
     const code = (err as NodeJS.ErrnoException).code

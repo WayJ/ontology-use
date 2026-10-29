@@ -1,0 +1,10 @@
+{
+  "id": "t005",
+  "type": "set",
+  "question": "Which Person individuals ou:worksAt http://example.org/ou/Acme?",
+  "gold": [
+    "http://example.org/ou/alice",
+    "http://example.org/ou/bob"
+  ],
+  "ontologyRefs": ["ontology/mini.ttl"]
+}

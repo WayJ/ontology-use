@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest'
-import { mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises'
+import { mkdtemp, mkdir, writeFile, rm, access } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
-import { join } from 'node:path'
+import { join, isAbsolute } from 'node:path'
 import { loadEnabledPacks } from './loadPacks.js'
 
 describe('loadEnabledPacks', () => {
@@ -77,5 +77,14 @@ describe('loadEnabledPacks', () => {
     expect(packs[0]!.tasks.length).toBeGreaterThanOrEqual(2)
     expect(packs[0]!.ontologyPaths.length).toBeGreaterThanOrEqual(1)
     expect(packs.some((p) => p.packId === 'industrial-park')).toBe(false)
+  })
+
+  it('resolves ontologyRefs relative to the pack directory', async () => {
+    const packs = await loadEnabledPacks(root)
+    const refs = packs[0]!.tasks[0]!.ontologyRefs ?? []
+    expect(refs.length).toBeGreaterThan(0)
+    expect(isAbsolute(refs[0]!)).toBe(true)
+    expect(refs[0]!).toContain(join('packs-public-mini', 'ontology', 'mini.ttl'))
+    await access(refs[0]!)
   })
 })

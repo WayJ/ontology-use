@@ -1,0 +1,10 @@
+{
+  "id": "t003",
+  "type": "fields",
+  "question": "Propose an ActionSDK call to assign http://example.org/ou/alice to organization http://example.org/ou/Acme",
+  "gold": {
+    "action": "AssignWorksAt",
+    "objectIds": "http://example.org/ou/alice,http://example.org/ou/Acme"
+  },
+  "ontologyRefs": ["ontology/mini.ttl"]
+}

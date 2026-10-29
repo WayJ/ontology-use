@@ -92,7 +92,7 @@ describe('createLlmReasoner', () => {
     ])
   })
 
-  it('defaults max_completion_tokens to 2048 in the request body', async () => {
+  it('defaults max_completion_tokens to 4096 in the request body', async () => {
     const fetchImpl = vi.fn(async () =>
       Response.json({
         choices: [{ message: { content: 'pong' } }],
@@ -104,7 +104,7 @@ describe('createLlmReasoner', () => {
     })
     await r.complete('hi')
     const body = JSON.parse(String(fetchImpl.mock.calls[0]![1]?.body))
-    expect(body.max_completion_tokens).toBe(2048)
+    expect(body.max_completion_tokens).toBe(4096)
   })
 
   it('allows overriding max_completion_tokens', async () => {
@@ -121,6 +121,45 @@ describe('createLlmReasoner', () => {
     await r.complete('hi')
     const body = JSON.parse(String(fetchImpl.mock.calls[0]![1]?.body))
     expect(body.max_completion_tokens).toBe(64)
+  })
+
+  it('rejects empty content even when reasoning_content present and includes finish_reason', async () => {
+    const fetchImpl = vi.fn(async () =>
+      Response.json({
+        choices: [
+          {
+            finish_reason: 'length',
+            message: { content: '', reasoning_content: 'think' },
+          },
+        ],
+      }),
+    )
+    const r = createLlmReasoner({
+      apiKey: 'test-key',
+      fetchImpl: fetchImpl as unknown as typeof fetch,
+    })
+    await expect(r.complete('hi')).rejects.toThrow(/empty|content/i)
+    await expect(r.complete('hi')).rejects.toThrow(/finish_reason=length/)
+  })
+
+  it('honors MINIMAX_MAX_COMPLETION_TOKENS env when opts omit maxCompletionTokens', async () => {
+    const prev = process.env.MINIMAX_MAX_COMPLETION_TOKENS
+    process.env.MINIMAX_MAX_COMPLETION_TOKENS = '1024'
+    try {
+      const fetchImpl = vi.fn(async () =>
+        Response.json({ choices: [{ message: { content: 'pong' } }] }),
+      )
+      const r = createLlmReasoner({
+        apiKey: 'test-key',
+        fetchImpl: fetchImpl as unknown as typeof fetch,
+      })
+      await r.complete('hi')
+      const body = JSON.parse(String(fetchImpl.mock.calls[0]![1]?.body))
+      expect(body.max_completion_tokens).toBe(1024)
+    } finally {
+      if (prev === undefined) delete process.env.MINIMAX_MAX_COMPLETION_TOKENS
+      else process.env.MINIMAX_MAX_COMPLETION_TOKENS = prev
+    }
   })
 
   it('exports LLM_MAX_CONCURRENCY hard cap of 5', () => {

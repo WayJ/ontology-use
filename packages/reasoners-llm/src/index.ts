@@ -39,6 +39,16 @@ function stripTrailingSlash(url: string): string {
   return url.replace(/\/+$/, '')
 }
 
+function resolveMaxCompletionTokens(opts?: LlmReasonerOptions): number {
+  if (opts?.maxCompletionTokens !== undefined) return opts.maxCompletionTokens
+  const env = process.env.MINIMAX_MAX_COMPLETION_TOKENS
+  if (env !== undefined && env !== '') {
+    const n = Number(env)
+    if (Number.isFinite(n) && n > 0) return n
+  }
+  return 4096
+}
+
 export function createLlmReasoner(opts?: LlmReasonerOptions): LlmReasoner {
   const apiKey = resolveApiKey(opts)
   const baseUrl = stripTrailingSlash(
@@ -46,7 +56,9 @@ export function createLlmReasoner(opts?: LlmReasonerOptions): LlmReasoner {
   )
   const model = opts?.model ?? process.env.MINIMAX_MODEL ?? DEFAULT_MODEL
   const fetchImpl = opts?.fetchImpl ?? globalThis.fetch
-  const maxCompletionTokens = opts?.maxCompletionTokens ?? 2048
+  const maxCompletionTokens = resolveMaxCompletionTokens(opts)
+
+  // TODO(research): MiniMax non-thinking / reasoning budget knob — unverified; do not invent API fields.
 
   const usageTotals: TokenUsage = {
     prompt_tokens: 0,
@@ -89,6 +101,7 @@ export function createLlmReasoner(opts?: LlmReasonerOptions): LlmReasoner {
 
       let data: {
         choices?: Array<{
+          finish_reason?: string
           message?: { content?: string | null; reasoning_content?: string }
         }>
         usage?: Partial<TokenUsage>
@@ -106,10 +119,17 @@ export function createLlmReasoner(opts?: LlmReasonerOptions): LlmReasoner {
         usageTotals.total_tokens += Number(usage.total_tokens ?? 0)
       }
 
-      const content = data.choices?.[0]?.message?.content
+      const choice = data.choices?.[0]
+      const content = choice?.message?.content
       if (content == null || String(content).trim() === '') {
+        const fr = choice?.finish_reason
+        const frPart =
+          typeof fr === 'string' && fr.length > 0
+            ? `; finish_reason=${fr.slice(0, 64)}`
+            : ''
         throw new Error(
-          'MiniMax returned empty message.content (do not use reasoning_content as the answer; try higher max_completion_tokens)',
+          'MiniMax returned empty message.content (do not use reasoning_content as the answer; try higher max_completion_tokens)' +
+            frPart,
         )
       }
       return String(content)

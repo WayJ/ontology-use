@@ -43,7 +43,7 @@ export function createLlmReasoner(opts?: LlmReasonerOptions): LlmReasoner {
   )
   const model = opts?.model ?? process.env.MINIMAX_MODEL ?? DEFAULT_MODEL
   const fetchImpl = opts?.fetchImpl ?? globalThis.fetch
-  const maxCompletionTokens = opts?.maxCompletionTokens
+  const maxCompletionTokens = opts?.maxCompletionTokens ?? 2048
 
   const usageTotals: TokenUsage = {
     prompt_tokens: 0,

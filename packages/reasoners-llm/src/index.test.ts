@@ -90,4 +90,35 @@ describe('createLlmReasoner', () => {
       { role: 'user', content: 'hello prompt' },
     ])
   })
+
+  it('defaults max_completion_tokens to 2048 in the request body', async () => {
+    const fetchImpl = vi.fn(async () =>
+      Response.json({
+        choices: [{ message: { content: 'pong' } }],
+      }),
+    )
+    const r = createLlmReasoner({
+      apiKey: 'test-key',
+      fetchImpl: fetchImpl as unknown as typeof fetch,
+    })
+    await r.complete('hi')
+    const body = JSON.parse(String(fetchImpl.mock.calls[0]![1]?.body))
+    expect(body.max_completion_tokens).toBe(2048)
+  })
+
+  it('allows overriding max_completion_tokens', async () => {
+    const fetchImpl = vi.fn(async () =>
+      Response.json({
+        choices: [{ message: { content: 'pong' } }],
+      }),
+    )
+    const r = createLlmReasoner({
+      apiKey: 'test-key',
+      maxCompletionTokens: 64,
+      fetchImpl: fetchImpl as unknown as typeof fetch,
+    })
+    await r.complete('hi')
+    const body = JSON.parse(String(fetchImpl.mock.calls[0]![1]?.body))
+    expect(body.max_completion_tokens).toBe(64)
+  })
 })

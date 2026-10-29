@@ -1,6 +1,12 @@
 import { describe, it, expect } from 'vitest'
-import { parseReasonerOutput, stripMarkdownFence } from './shared.js'
-import type { Task } from '@ontology-use/core'
+import {
+  parseReasonerOutput,
+  stripMarkdownFence,
+  outputContractFooter,
+  runWithPrompt,
+  shouldShortcut,
+} from './shared.js'
+import type { Reasoner, Task } from '@ontology-use/core'
 
 function task(partial: Partial<Task> & Pick<Task, 'type' | 'gold'>): Task {
   return {
@@ -94,5 +100,61 @@ describe('parseReasonerOutput', () => {
         task({ type: 'fields', gold: { action: 'X' } }),
       ),
     ).toEqual({ value: 'nope' })
+  })
+})
+
+describe('outputContractFooter', () => {
+  it('exact asks for a single plain string', () => {
+    const f = outputContractFooter(task({ type: 'exact', gold: 'Alice' }))
+    expect(f).toMatch(/single plain string/i)
+    expect(f).toMatch(/No JSON/i)
+  })
+
+  it('set asks for a JSON array of strings', () => {
+    const f = outputContractFooter(
+      task({ type: 'set', gold: ['http://example.org/ou/alice'] }),
+    )
+    expect(f).toMatch(/JSON array of strings/i)
+  })
+
+  it('fields lists gold keys', () => {
+    const f = outputContractFooter(
+      task({
+        type: 'fields',
+        gold: { action: 'Introduce', objectIds: 'x' },
+      }),
+    )
+    expect(f).toMatch(/JSON object/i)
+    expect(f).toContain('action')
+    expect(f).toContain('objectIds')
+  })
+})
+
+describe('runWithPrompt contract wiring', () => {
+  it('appends footer for live reasoner and keeps mock shortcut gold without footer', async () => {
+    let seenPrompt = ''
+    const llm: Reasoner = {
+      id: 'llm',
+      async complete(prompt) {
+        seenPrompt = prompt
+        return 'Alice'
+      },
+    }
+    const t = task({ type: 'exact', gold: 'Alice' })
+    await runWithPrompt(t, llm, {}, () => 'BASE_PROMPT')
+    expect(seenPrompt.startsWith('BASE_PROMPT')).toBe(true)
+    expect(seenPrompt).toMatch(/OUTPUT CONTRACT/i)
+    expect(seenPrompt).toMatch(/single plain string/i)
+
+    const mock: Reasoner = {
+      id: 'mock',
+      async complete() {
+        throw new Error('should not be called')
+      },
+    }
+    const ans = await runWithPrompt(t, mock, {}, () => 'BASE_PROMPT')
+    expect(ans.value).toBe('Alice')
+    expect(ans.meta?.strategy).toBe('mock-shortcut')
+    expect(shouldShortcut(mock, {})).toBe(true)
   })
 })

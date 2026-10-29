@@ -1,6 +1,7 @@
 import type { Answer, Method } from '@ontology-use/core'
 import {
   goldShapedValue,
+  outputContractFooter,
   parseReasonerOutput,
   readOntologyText,
   shouldShortcut,
@@ -37,7 +38,9 @@ export function createM10(opts: MethodOpts = {}): Method {
           },
         }
       }
-      const prompt = `ACTION_SDK\nONTOLOGY:\n${ontology}\n\nQUESTION:\n${task.question}\n`
+      const prompt =
+        `ACTION_SDK\nONTOLOGY:\n${ontology}\n\nQUESTION:\n${task.question}\n` +
+        outputContractFooter(task)
       const raw = await reasoner.complete(prompt)
       const parsed = parseReasonerOutput(raw, task)
       return {
@@ -45,6 +48,7 @@ export function createM10(opts: MethodOpts = {}): Method {
         meta: {
           strategy: 'reasoner',
           prompt,
+          rawLength: raw.length,
           actionEnvelope: asActionFields(parsed),
         },
       }

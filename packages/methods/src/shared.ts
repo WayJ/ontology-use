@@ -92,6 +92,38 @@ export function parseReasonerOutput(raw: string, task: Task): Answer['value'] {
   return trimmed
 }
 
+
+export function outputContractFooter(task: Task): string {
+  if (task.type === 'exact') {
+    return (
+      '\n\nOUTPUT CONTRACT:\n' +
+      'Reply with the answer as a single plain string only. ' +
+      'No JSON, no markdown fences, no explanation.\n'
+    )
+  }
+  if (task.type === 'set') {
+    return (
+      '\n\nOUTPUT CONTRACT:\n' +
+      'Reply with a JSON array of strings only ' +
+      '(e.g. ["http://…","http://…"]). No prose, no markdown fences.\n'
+    )
+  }
+  if (task.type === 'fields') {
+    const keys =
+      task.gold &&
+      typeof task.gold === 'object' &&
+      !Array.isArray(task.gold)
+        ? Object.keys(task.gold)
+        : []
+    return (
+      '\n\nOUTPUT CONTRACT:\n' +
+      'Reply with a JSON object only whose keys are exactly: ' +
+      `${keys.join(', ')}. No prose, no markdown fences.\n`
+    )
+  }
+  return ''
+}
+
 export function goldShapedValue(task: Task): Answer['value'] {
   return task.gold
 }
@@ -115,11 +147,11 @@ export async function runWithPrompt(
     }
     return enrich ? enrich(base, ontology, '') : base
   }
-  const prompt = buildPrompt(ontology)
+  const prompt = buildPrompt(ontology) + outputContractFooter(task)
   const raw = await reasoner.complete(prompt)
   const base: Answer = {
     value: parseReasonerOutput(raw, task),
-    meta: { strategy: 'reasoner', prompt },
+    meta: { strategy: 'reasoner', prompt, rawLength: raw.length },
   }
   return enrich ? enrich(base, ontology, raw) : base
 }

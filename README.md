@@ -13,22 +13,33 @@ Research eval harness: run methods **M0–M10** on public OWL/RDF task packs wit
 ```bash
 npm i
 npm test
-npm run eval          # mock gold shortcut (pipeline smoke) → results/latest.md
+npm run eval          # --reasoner=mock (default); mock-shortcut smoke → results/latest.md
 npm run eval:strict   # strictMock: no shortcut → results/strict/latest.md
 ```
 
 Paper experiments must cite only those result files; see [docs/paper/04-experiments.md](docs/paper/04-experiments.md).
 
+## Reasoners
+
+| Flag | Behavior |
+|------|----------|
+| `--reasoner=mock` (default) | Deterministic mock; used by `npm run eval` |
+| `--reasoner=llm` | **Phase 1:** exits non-zero with `LLM reasoner not implemented in phase 1; set fixtures or use mock` **before** writing any `results/` files |
+
+```bash
+npm run eval -w @ontology-use/harness -- --reasoner=llm   # must fail; no polluted latest.*
+```
+
 ## Layout
 
 - `packages/core` — shared types
 - `packages/reasoners-mock` — deterministic reasoner
-- `packages/packs-public-mini` — default-enabled mini pack (exact/set/fields)
+- `packages/reasoners-llm` — phase-1 stub (throws on `complete`)
+- `packages/packs-public-mini` — default-enabled mini pack
+- `packages/packs-industrial-park` — optional add-on (`enabled: false`, not in default eval)
 - `packages/methods` — M0–M10 runners
 - `packages/harness` — load → run → score → write
 - `docs/paper/` — Chinese paper skeleton
-
-Industrial-park ontology packs stay `enabled: false` and are not in the default eval.
 
 `ontologyRefs` in task JSON are resolved relative to the pack directory when loaded.
 
@@ -39,7 +50,7 @@ npm run eval
 npm run eval:strict
 npm run eval -w @ontology-use/harness -- --packs ./packages --out ./results
 npm run eval -w @ontology-use/harness -- --strict-mock --out ./results/strict
-npm run eval -w @ontology-use/harness -- --reasoner=llm  # phase 1: errors out
+npm run eval -w @ontology-use/harness -- --reasoner=llm  # exits 1; clear error; no write
 ```
 
 ## License

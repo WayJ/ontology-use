@@ -1,0 +1,6 @@
+{
+  "name": "@ontology-use/packs-industrial-park",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Optional industrial-park add-on pack (enabled:false by default)"
+}

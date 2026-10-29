@@ -9,6 +9,7 @@
   "dependencies": {
     "@ontology-use/core": "*",
     "@ontology-use/methods": "*",
+    "@ontology-use/reasoners-llm": "*",
     "@ontology-use/reasoners-mock": "*"
   },
   "scripts": {

@@ -1,8 +1,8 @@
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { createMockReasoner } from '@ontology-use/reasoners-mock'
 import { allMethods } from '@ontology-use/methods'
 import { runEval } from './eval.js'
+import { assertReasonerRunnable, createReasoner } from './createReasoner.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repoRoot = resolve(__dirname, '../../..')
@@ -40,15 +40,17 @@ async function main() {
   const { packsRoot, outDir, reasonerKind, strictMock } = parseArgs(
     process.argv.slice(2),
   )
-  if (reasonerKind !== 'mock') {
-    console.error(
-      `Reasoner "${reasonerKind}" is not implemented in phase 1. Use --reasoner=mock.`,
-    )
+
+  // Fail before runEval so default results/ are never polluted by llm stubs.
+  try {
+    assertReasonerRunnable(reasonerKind)
+  } catch (err) {
+    console.error(err instanceof Error ? err.message : err)
     process.exit(1)
   }
 
   const methods = allMethods({ strictMock })
-  const reasoner = createMockReasoner()
+  const reasoner = createReasoner(reasonerKind)
   const results = await runEval({ packsRoot, methods, reasoner, outDir })
   console.log(
     `Wrote ${results.length} score rows to ${outDir}/latest.md and latest.json (${methods.length} methods, strictMock=${strictMock})`,

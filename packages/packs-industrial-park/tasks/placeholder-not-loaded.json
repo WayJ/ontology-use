@@ -1,0 +1,6 @@
+{
+  "id": "industrial-placeholder",
+  "type": "exact",
+  "question": "Placeholder — not loaded while enabled:false",
+  "gold": "http://example.org/ou/unused"
+}

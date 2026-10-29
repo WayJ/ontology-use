@@ -1,6 +1,6 @@
 # 4. 实验
 
-> **引用规则：** 本节数字一律来自仓库磁盘上**当前**的 `results/latest.md` 与 `results/strict/latest.md`。未跑出的数字不写。复跑：`npm run eval` / `npm run eval:strict`。
+> **引用规则：** 本节数字一律来自仓库磁盘上**当前**的结果文件。未跑出的数字不写。复跑：`npm run eval` / `npm run eval:strict` / `npm run eval -- --reasoner=llm`（需 `MINIMAX_API_KEY`；写入 `results/llm-<stamp>/`，已 gitignore）。
 
 ## 4.1 设置
 
@@ -58,6 +58,34 @@
 
 解读：严格模式全员 0 分、每方法 8 次失败计数——说明捷径已关闭，打分器在拒绝错误答案；**仍不能**解释为某方法「更差」，因尚未接入真实 LLM。
 
-## 4.4 后续（未跑，不报数）
+## 4.4 LLM run（MiniMax CN）
 
-真实 LLM reasoner、更大公开本体包、工业园 add-on：待实现后再引用新的 `results/` 目录。
+命令：`npm run eval -- --reasoner=llm`（需环境变量 `MINIMAX_API_KEY`；可选 `MINIMAX_BASE_URL` / `MINIMAX_MODEL`）
+
+- **Provider / endpoint：** `https://api.minimax.cn/v1`（OpenAI-compatible chat/completions）
+- **Model：** `MiniMax-M3.1-Flash`
+- **Concurrency：** hard cap `maxConcurrency: 5`（当前 `runEval` 串行，live = 1）；勿无信号量并行
+- **输出目录（本轮磁盘）：** `results/llm-20261029T222608/`（`latest.md` / `latest.json` / `meta.json`；**不入库**，见 `.gitignore`）
+- **meta.json（本轮）：** `usageTotals` prompt_tokens=29562, completion_tokens=74656, total_tokens=104218；`maxConcurrency: 5`
+
+摘录（来自该目录 `latest.md`，**不是** mock-shortcut，可用于方法对照；分数仍偏低，提示/解析尚粗）：
+
+| method | avg score | tasks | failures |
+| --- | ---: | ---: | ---: |
+| M0 | 0.1250 | 8 | 7 |
+| M1 | 0.0000 | 8 | 8 |
+| M2 | 0.0000 | 8 | 8 |
+| M3 | 0.0000 | 8 | 8 |
+| M4 | 0.0000 | 8 | 8 |
+| M5 | 0.1250 | 8 | 7 |
+| M6 | 0.1250 | 8 | 7 |
+| M7 | 0.1250 | 8 | 7 |
+| M8 | 0.0000 | 8 | 8 |
+| M9 | 0.0000 | 8 | 8 |
+| M10 | 0.1250 | 8 | 7 |
+
+行数：88（11×8）。部分失败为 empty `message.content`（thinking 占满 completion）；默认 `max_completion_tokens=2048`。复现：设 key 后重跑上述命令，引用新的 `results/llm-*/`，勿手填旧数。
+
+## 4.5 后续
+
+更大公开本体包、工业园 add-on 启用、提示工程与解析加固：待实现后再引用新表。

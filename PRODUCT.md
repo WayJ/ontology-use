@@ -35,6 +35,6 @@
 建模 UI；生产 SDK；Computer Use；为发表而投稿（论文可不发布）。
 
 ## 状态
-第一期 harness 已落地（2026-10-29）：M0–M10 + public-mini + mock/strict 评测 + 论文骨架。
-默认 `npm run eval` 为 mock-shortcut 烟测；`eval:strict` 无捷径；`--reasoner=llm` 一期拒绝。
-仓路径：`/workspace/ontology-use`。真实 LLM 与更大公开 pack 为二期。
+第一期 harness 已落地（2026-10-29）：M0–M10 + public-mini + foaf-lite + mock/strict + **MiniMax CN LLM** 评测 + 论文骨架。
+默认 `npm run eval` 为 mock-shortcut 烟测；`eval:strict` 无捷径；`npm run eval -- --reasoner=llm` 需 `MINIMAX_API_KEY`，默认模型 `MiniMax-M3.1-Flash`、`https://api.minimax.cn/v1`，结果进 `results/llm-<stamp>/`（gitignore；`meta.maxConcurrency: 5`）。
+仓路径：`/workspace/ontology-use`。更大公开 pack / 工业园启用仍为后续。

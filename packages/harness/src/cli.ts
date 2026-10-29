@@ -1,13 +1,27 @@
-import { resolve, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { writeFile } from 'node:fs/promises'
+import { join, resolve, dirname } from 'node:path'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { allMethods } from '@ontology-use/methods'
+import type { LlmReasoner } from '@ontology-use/reasoners-llm'
 import { runEval } from './eval.js'
 import { assertReasonerRunnable, createReasoner } from './createReasoner.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repoRoot = resolve(__dirname, '../../..')
 
-function parseArgs(argv: string[]) {
+const DEFAULT_BASE_URL = 'https://api.minimax.cn/v1'
+const DEFAULT_MODEL = 'MiniMax-M3.1-Flash'
+
+/** YYYYMMDDTHHMMSS in local time for llm outDir stamps. */
+export function formatLlmRunStamp(d = new Date()): string {
+  const p = (n: number) => String(n).padStart(2, '0')
+  return (
+    `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}` +
+    `T${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`
+  )
+}
+
+export function parseArgs(argv: string[]) {
   let packsRoot = resolve(repoRoot, 'packages')
   let outDir: string | undefined
   let reasonerKind = 'mock'
@@ -29,9 +43,13 @@ function parseArgs(argv: string[]) {
     }
   }
   if (!outExplicit) {
-    outDir = strictMock
-      ? resolve(repoRoot, 'results/strict')
-      : resolve(repoRoot, 'results')
+    if (reasonerKind === 'llm') {
+      outDir = resolve(repoRoot, `results/llm-${formatLlmRunStamp()}`)
+    } else if (strictMock) {
+      outDir = resolve(repoRoot, 'results/strict')
+    } else {
+      outDir = resolve(repoRoot, 'results')
+    }
   }
   return { packsRoot, outDir: outDir!, reasonerKind, strictMock }
 }
@@ -41,7 +59,7 @@ async function main() {
     process.argv.slice(2),
   )
 
-  // Fail before runEval so default results/ are never polluted by llm stubs.
+  // Fail before runEval so default results/ are never polluted without a key.
   try {
     assertReasonerRunnable(reasonerKind)
   } catch (err) {
@@ -51,13 +69,44 @@ async function main() {
 
   const methods = allMethods({ strictMock })
   const reasoner = createReasoner(reasonerKind)
+  const startedAt = new Date().toISOString()
+
   const results = await runEval({ packsRoot, methods, reasoner, outDir })
+
+  if (reasonerKind === 'llm') {
+    const baseUrl = (
+      process.env.MINIMAX_BASE_URL ?? DEFAULT_BASE_URL
+    ).replace(/\/+$/, '')
+    const model = process.env.MINIMAX_MODEL ?? DEFAULT_MODEL
+    const meta: Record<string, unknown> = {
+      provider: 'minimax',
+      baseUrl,
+      model,
+      startedAt,
+    }
+    if (
+      reasoner &&
+      typeof (reasoner as LlmReasoner).getUsageTotals === 'function'
+    ) {
+      meta.usageTotals = (reasoner as LlmReasoner).getUsageTotals()
+    }
+    await writeFile(
+      join(outDir, 'meta.json'),
+      JSON.stringify(meta, null, 2) + '\n',
+    )
+  }
+
   console.log(
     `Wrote ${results.length} score rows to ${outDir}/latest.md and latest.json (${methods.length} methods, strictMock=${strictMock})`,
   )
 }
 
-main().catch((err) => {
-  console.error(err)
-  process.exit(1)
-})
+const entry = process.argv[1]
+  ? pathToFileURL(resolve(process.argv[1])).href
+  : ''
+if (import.meta.url === entry) {
+  main().catch((err) => {
+    console.error(err)
+    process.exit(1)
+  })
+}

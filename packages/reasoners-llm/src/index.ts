@@ -3,9 +3,6 @@ import type { Reasoner } from '@ontology-use/core'
 export const LLM_MISSING_KEY_MESSAGE =
   'MINIMAX_API_KEY is required for --reasoner=llm'
 
-/** @deprecated Use LLM_MISSING_KEY_MESSAGE; kept for harness migration until Task 2. */
-export const LLM_PHASE1_MESSAGE = LLM_MISSING_KEY_MESSAGE
-
 const DEFAULT_BASE_URL = 'https://api.minimax.cn/v1'
 const DEFAULT_MODEL = 'MiniMax-M3.1-Flash'
 

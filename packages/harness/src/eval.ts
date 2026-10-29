@@ -1,3 +1,5 @@
+import { writeFile } from 'node:fs/promises'
+import { join } from 'node:path'
 import type { Method, Reasoner, ScoreResult } from '@ontology-use/core'
 import { loadEnabledPacks } from './loadPacks.js'
 import { scoreAnswer } from './score.js'
@@ -8,6 +10,8 @@ export type RunEvalOpts = {
   methods: Method[]
   reasoner: Reasoner
   outDir: string
+  /** Optional run metadata written beside latest.json (never include API keys). */
+  runMeta?: Record<string, unknown>
 }
 
 export async function runEval(opts: RunEvalOpts): Promise<ScoreResult[]> {
@@ -41,5 +45,11 @@ export async function runEval(opts: RunEvalOpts): Promise<ScoreResult[]> {
   }
 
   await writeResults(opts.outDir, results)
+  if (opts.runMeta) {
+    await writeFile(
+      join(opts.outDir, 'meta.json'),
+      JSON.stringify(opts.runMeta, null, 2) + '\n',
+    )
+  }
   return results
 }

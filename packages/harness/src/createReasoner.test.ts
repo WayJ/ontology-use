@@ -1,25 +1,47 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, afterEach } from 'vitest'
 import {
   assertReasonerRunnable,
   createReasoner,
-  LLM_PHASE1_MESSAGE,
 } from './createReasoner.js'
+import { LLM_MISSING_KEY_MESSAGE } from '@ontology-use/reasoners-llm'
 
 describe('createReasoner / assertReasonerRunnable', () => {
+  const prevKey = process.env.MINIMAX_API_KEY
+
+  afterEach(() => {
+    if (prevKey === undefined) delete process.env.MINIMAX_API_KEY
+    else process.env.MINIMAX_API_KEY = prevKey
+  })
+
   it('returns mock reasoner', async () => {
     const r = createReasoner('mock')
     expect(r.id).toBe('mock')
     expect(await r.complete('x')).toMatch(/^MOCK:/)
   })
 
-  it('llm reasoner has id llm (live complete deferred to Task 2 harness wiring)', () => {
+  it('createReasoner llm returns id llm when key set', () => {
+    process.env.MINIMAX_API_KEY = 'test-key-not-real'
     const r = createReasoner('llm')
     expect(r.id).toBe('llm')
   })
 
-  it('assertReasonerRunnable blocks llm before eval', () => {
+  it('assertReasonerRunnable allows mock always', () => {
+    delete process.env.MINIMAX_API_KEY
     expect(() => assertReasonerRunnable('mock')).not.toThrow()
-    // Still phase-1 gate until Task 2 switches to MINIMAX_API_KEY check.
-    expect(() => assertReasonerRunnable('llm')).toThrow(LLM_PHASE1_MESSAGE)
+  })
+
+  it('assertReasonerRunnable throws LLM_MISSING_KEY_MESSAGE when key unset', () => {
+    delete process.env.MINIMAX_API_KEY
+    expect(() => assertReasonerRunnable('llm')).toThrow(LLM_MISSING_KEY_MESSAGE)
+  })
+
+  it('assertReasonerRunnable throws when key is empty string', () => {
+    process.env.MINIMAX_API_KEY = ''
+    expect(() => assertReasonerRunnable('llm')).toThrow(LLM_MISSING_KEY_MESSAGE)
+  })
+
+  it('assertReasonerRunnable allows llm when MINIMAX_API_KEY set', () => {
+    process.env.MINIMAX_API_KEY = 'test-key-not-real'
+    expect(() => assertReasonerRunnable('llm')).not.toThrow()
   })
 })

@@ -108,4 +108,38 @@ describe('runEval', () => {
     expect(failed?.error).toMatch(/boom/)
     expect(passed?.ok).toBe(true)
   })
+
+  it('writes meta.json when runMeta is provided (no secrets)', async () => {
+    const method: Method = {
+      id: 'M0',
+      name: 'Fake',
+      async run(task: Task) {
+        return { value: task.gold as string }
+      },
+    }
+    const reasoner: Reasoner = {
+      id: 'llm',
+      async complete() {
+        return ''
+      },
+    }
+    const runMeta = {
+      provider: 'minimax',
+      baseUrl: 'https://api.minimax.cn/v1',
+      model: 'MiniMax-M3.1-Flash',
+      startedAt: '2026-10-29T14:00:00.000Z',
+      usageTotals: { prompt_tokens: 1, completion_tokens: 2, total_tokens: 3 },
+    }
+    await runEval({
+      packsRoot: root,
+      methods: [method],
+      reasoner,
+      outDir,
+      runMeta,
+    })
+    const meta = JSON.parse(await readFile(join(outDir, 'meta.json'), 'utf8'))
+    expect(meta).toEqual(runMeta)
+    expect(JSON.stringify(meta)).not.toMatch(/api[_-]?key/i)
+    expect(JSON.stringify(meta)).not.toContain('sk-')
+  })
 })

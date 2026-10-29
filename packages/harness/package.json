@@ -4,12 +4,13 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/loadPacks.ts"
+    ".": "./src/eval.ts"
   },
   "dependencies": {
-    "@ontology-use/core": "*"
+    "@ontology-use/core": "*",
+    "@ontology-use/reasoners-mock": "*"
   },
   "scripts": {
-    "eval": "echo \"harness eval not wired yet\" && exit 1"
+    "eval": "tsx src/cli.ts"
   }
 }

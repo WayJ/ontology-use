@@ -1,0 +1,13 @@
+{
+  "name": "@ontology-use/methods",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ontology-use/core": "*",
+    "@ontology-use/reasoners-mock": "*"
+  }
+}

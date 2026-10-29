@@ -7,8 +7,8 @@
   ],
   "scripts": {
     "test": "vitest run",
-    "eval": "npm run eval -w @ontology-use/harness",
-    "eval:strict": "npm run eval:strict -w @ontology-use/harness",
+    "eval": "npm run eval -w @ontology-use/harness --",
+    "eval:strict": "npm run eval:strict -w @ontology-use/harness --",
     "paper:check": "node -e \"const fs=require(\\\"fs\\\"); for (const f of [\\\"results/latest.md\\\",\\\"results/strict/latest.md\\\"]) { if(!fs.existsSync(f)) { console.error(\\\"missing \\\"+f); process.exit(1);} } console.log(\\\"Paper result sources OK:\\\", \\\"results/latest.md\\\", \\\"results/strict/latest.md\\\"); console.log(\\\"Edit docs/paper after: npm run eval && npm run eval:strict\\\");\""
   },
   "devDependencies": {

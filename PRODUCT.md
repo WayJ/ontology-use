@@ -35,4 +35,6 @@
 建模 UI；生产 SDK；Computer Use；为发表而投稿（论文可不发布）。
 
 ## 状态
-用户已确认研究定位与论文交付；第一期按全矩阵搭脚手架并开始实现。
+第一期 harness 已落地（2026-10-29）：M0–M10 + public-mini + mock/strict 评测 + 论文骨架。
+默认 `npm run eval` 为 mock-shortcut 烟测；`eval:strict` 无捷径；`--reasoner=llm` 一期拒绝。
+仓路径：`/workspace/ontology-use`。真实 LLM 与更大公开 pack 为二期。

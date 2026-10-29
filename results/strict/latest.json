@@ -1,6 +1,204 @@
 [
   {
     "methodId": "M0",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M1",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M2",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M3",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M4",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M5",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M6",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M7",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M8",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M9",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M10",
+    "taskId": "foaf-t001",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M0",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M1",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M2",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M3",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M4",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M5",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M6",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M7",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M8",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M9",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M10",
+    "taskId": "foaf-t002",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M0",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M1",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M2",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M3",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M4",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M5",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M6",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M7",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M8",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M9",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M10",
+    "taskId": "foaf-t003",
+    "ok": false,
+    "score": 0
+  },
+  {
+    "methodId": "M0",
     "taskId": "t001",
     "ok": false,
     "score": 0

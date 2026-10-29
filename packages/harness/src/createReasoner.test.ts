@@ -12,14 +12,14 @@ describe('createReasoner / assertReasonerRunnable', () => {
     expect(await r.complete('x')).toMatch(/^MOCK:/)
   })
 
-  it('llm reasoner throws on complete with phase-1 message', async () => {
+  it('llm reasoner has id llm (live complete deferred to Task 2 harness wiring)', () => {
     const r = createReasoner('llm')
     expect(r.id).toBe('llm')
-    await expect(r.complete('q')).rejects.toThrow(LLM_PHASE1_MESSAGE)
   })
 
   it('assertReasonerRunnable blocks llm before eval', () => {
     expect(() => assertReasonerRunnable('mock')).not.toThrow()
+    // Still phase-1 gate until Task 2 switches to MINIMAX_API_KEY check.
     expect(() => assertReasonerRunnable('llm')).toThrow(LLM_PHASE1_MESSAGE)
   })
 })

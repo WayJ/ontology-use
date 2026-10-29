@@ -9,15 +9,17 @@ const repoRoot = resolve(__dirname, '../../..')
 
 function parseArgs(argv: string[]) {
   let packsRoot = resolve(repoRoot, 'packages')
-  let outDir = resolve(repoRoot, 'results')
+  let outDir: string | undefined
   let reasonerKind = 'mock'
   let strictMock = false
+  let outExplicit = false
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]!
     if (a === '--packs' && argv[i + 1]) {
       packsRoot = resolve(argv[++i]!)
     } else if (a === '--out' && argv[i + 1]) {
       outDir = resolve(argv[++i]!)
+      outExplicit = true
     } else if (a.startsWith('--reasoner=')) {
       reasonerKind = a.slice('--reasoner='.length)
     } else if (a === '--reasoner' && argv[i + 1]) {
@@ -26,7 +28,12 @@ function parseArgs(argv: string[]) {
       strictMock = true
     }
   }
-  return { packsRoot, outDir, reasonerKind, strictMock }
+  if (!outExplicit) {
+    outDir = strictMock
+      ? resolve(repoRoot, 'results/strict')
+      : resolve(repoRoot, 'results')
+  }
+  return { packsRoot, outDir: outDir!, reasonerKind, strictMock }
 }
 
 async function main() {
@@ -44,7 +51,7 @@ async function main() {
   const reasoner = createMockReasoner()
   const results = await runEval({ packsRoot, methods, reasoner, outDir })
   console.log(
-    `Wrote ${results.length} score rows to ${outDir}/latest.md and latest.json (${methods.length} methods)`,
+    `Wrote ${results.length} score rows to ${outDir}/latest.md and latest.json (${methods.length} methods, strictMock=${strictMock})`,
   )
 }
 

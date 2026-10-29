@@ -5,7 +5,8 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "test": "vitest run",
-    "eval": "npm run eval -w @ontology-use/harness"
+    "eval": "npm run eval -w @ontology-use/harness",
+    "eval:strict": "npm run eval:strict -w @ontology-use/harness"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

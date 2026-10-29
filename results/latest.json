@@ -130,5 +130,203 @@
     "taskId": "t002",
     "ok": true,
     "score": 1
+  },
+  {
+    "methodId": "M0",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M1",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M2",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M3",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M4",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M5",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M6",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M7",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M8",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M9",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M10",
+    "taskId": "t003",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M0",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M1",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M2",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M3",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M4",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M5",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M6",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M7",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M8",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M9",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M10",
+    "taskId": "t004",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M0",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M1",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M2",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M3",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M4",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M5",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M6",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M7",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M8",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M9",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
+  },
+  {
+    "methodId": "M10",
+    "taskId": "t005",
+    "ok": true,
+    "score": 1
   }
 ]

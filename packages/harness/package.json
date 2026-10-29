@@ -12,6 +12,7 @@
     "@ontology-use/reasoners-mock": "*"
   },
   "scripts": {
-    "eval": "tsx src/cli.ts"
+    "eval": "tsx src/cli.ts",
+    "eval:strict": "tsx src/cli.ts --strict-mock"
   }
 }

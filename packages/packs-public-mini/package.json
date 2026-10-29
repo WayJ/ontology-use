@@ -1,0 +1,6 @@
+{
+  "name": "@ontology-use/packs-public-mini",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Default-enabled public mini OWL/RDF eval pack (data only)"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "t001",
+  "type": "exact",
+  "question": "What OWL class is http://example.org/ou/alice an instance of?",
+  "gold": "http://example.org/ou/Person",
+  "ontologyRefs": ["ontology/mini.ttl"]
+}

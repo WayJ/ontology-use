@@ -28,21 +28,25 @@ export function createM10(opts: MethodOpts = {}): Method {
     async run(task, reasoner) {
       const ontology = await readOntologyText(task)
       if (shouldShortcut(reasoner, opts)) {
-        const shaped =
-          task.type === 'fields'
-            ? (goldShapedValue(task) as Record<string, string>)
-            : asActionFields(goldShapedValue(task))
+        const value = goldShapedValue(task)
         return {
-          value: shaped,
-          meta: { strategy: 'mock-shortcut' },
+          value,
+          meta: {
+            strategy: 'mock-shortcut',
+            actionEnvelope: asActionFields(value),
+          },
         }
       }
       const prompt = `ACTION_SDK\nONTOLOGY:\n${ontology}\n\nQUESTION:\n${task.question}\n`
       const raw = await reasoner.complete(prompt)
-      const parsed = parseReasonerOutput(raw, { ...task, type: 'fields' })
+      const parsed = parseReasonerOutput(raw, task)
       return {
-        value: asActionFields(parsed),
-        meta: { strategy: 'reasoner', prompt },
+        value: parsed,
+        meta: {
+          strategy: 'reasoner',
+          prompt,
+          actionEnvelope: asActionFields(parsed),
+        },
       }
     },
   }

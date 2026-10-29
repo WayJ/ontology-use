@@ -2,6 +2,8 @@
 
 Research eval harness: run methods **M0–M10** on public OWL/RDF task packs with a default **mock reasoner** (deterministic, zero network). Optional real LLM is phase 2.
 
+**Not an SDK/MCP product.** Deliverables: benchmark + method matrix + [Chinese paper skeleton](docs/paper/README.md).
+
 ## Requirements
 
 - Node.js ≥ 20 (22 recommended)
@@ -11,15 +13,11 @@ Research eval harness: run methods **M0–M10** on public OWL/RDF task packs wit
 ```bash
 npm i
 npm test
-npm run eval          # mock gold shortcut (pipeline smoke)
-npm run eval:strict   # strictMock: no shortcut; writes results/strict/
+npm run eval          # mock gold shortcut (pipeline smoke) → results/latest.md
+npm run eval:strict   # strictMock: no shortcut → results/strict/latest.md
 ```
 
-Then open:
-
-- `results/latest.md` — default eval table
-- `results/latest.json` — raw `ScoreResult` rows
-- `results/strict/latest.md` — strict-mock eval table
+Paper experiments must cite only those result files; see [docs/paper/04-experiments.md](docs/paper/04-experiments.md).
 
 ## Layout
 
@@ -28,6 +26,7 @@ Then open:
 - `packages/packs-public-mini` — default-enabled mini pack (exact/set/fields)
 - `packages/methods` — M0–M10 runners
 - `packages/harness` — load → run → score → write
+- `docs/paper/` — Chinese paper skeleton
 
 Industrial-park ontology packs stay `enabled: false` and are not in the default eval.
 

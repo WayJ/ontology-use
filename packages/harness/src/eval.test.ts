@@ -142,4 +142,54 @@ describe('runEval', () => {
     expect(JSON.stringify(meta)).not.toMatch(/api[_-]?key/i)
     expect(JSON.stringify(meta)).not.toContain('sk-')
   })
+
+  it('includes truncated answerPreview and rawLength on success', async () => {
+    const long = 'x'.repeat(250)
+    const method: Method = {
+      id: 'M0',
+      name: 'Fake',
+      async run() {
+        return {
+          value: long,
+          meta: { strategy: 'reasoner', rawLength: 42 },
+        }
+      },
+    }
+    const reasoner: Reasoner = { id: 'llm', async complete() { return long } }
+    const results = await runEval({
+      packsRoot: root,
+      methods: [method],
+      reasoner,
+      outDir,
+    })
+    const row = results[0]!
+    expect(row.answerPreview).toBeDefined()
+    expect(row.answerPreview!.length).toBeLessThanOrEqual(201) // 200 + ellipsis
+    expect(row.answerPreview!.endsWith('…')).toBe(true)
+    expect(row.rawLength).toBe(42)
+
+    const json = JSON.parse(await readFile(join(outDir, 'latest.json'), 'utf8'))
+    expect(json[0].answerPreview).toBe(row.answerPreview)
+    expect(json[0].rawLength).toBe(42)
+  })
+
+  it('omits preview on throw path and keeps error', async () => {
+    const method: Method = {
+      id: 'M0',
+      name: 'Boom',
+      async run() {
+        throw new Error('boom')
+      },
+    }
+    const reasoner: Reasoner = { id: 'llm', async complete() { return '' } }
+    const results = await runEval({
+      packsRoot: root,
+      methods: [method],
+      reasoner,
+      outDir,
+    })
+    expect(results[0]!.error).toMatch(/boom/)
+    expect(results[0]!.answerPreview).toBeUndefined()
+    expect(results[0]!.rawLength).toBeUndefined()
+  })
 })

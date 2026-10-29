@@ -41,6 +41,10 @@ export type ScoreResult = {
   ok: boolean
   score: number
   error?: string
+  /** Truncated JSON/string preview of answer.value; optional */
+  answerPreview?: string
+  /** Length of raw reasoner completion when available */
+  rawLength?: number
 }
 
 const METHOD_IDS: readonly MethodId[] = [

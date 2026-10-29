@@ -157,4 +157,20 @@ describe('runWithPrompt contract wiring', () => {
     expect(ans.meta?.strategy).toBe('mock-shortcut')
     expect(shouldShortcut(mock, {})).toBe(true)
   })
+
+  it('stashes rawLength on reasoner answers', async () => {
+    const llm: Reasoner = {
+      id: 'llm',
+      async complete() {
+        return 'Alice'
+      },
+    }
+    const ans = await runWithPrompt(
+      task({ type: 'exact', gold: 'Alice' }),
+      llm,
+      {},
+      () => 'P',
+    )
+    expect(ans.meta?.rawLength).toBe(5)
+  })
 })

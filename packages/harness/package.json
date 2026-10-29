@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@ontology-use/core": "*",
+    "@ontology-use/methods": "*",
     "@ontology-use/reasoners-mock": "*"
   },
   "scripts": {

@@ -2,6 +2,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest'
 import {
   createLlmReasoner,
   LLM_MISSING_KEY_MESSAGE,
+  LLM_MAX_CONCURRENCY,
 } from './index.js'
 
 afterEach(() => {
@@ -120,5 +121,9 @@ describe('createLlmReasoner', () => {
     await r.complete('hi')
     const body = JSON.parse(String(fetchImpl.mock.calls[0]![1]?.body))
     expect(body.max_completion_tokens).toBe(64)
+  })
+
+  it('exports LLM_MAX_CONCURRENCY hard cap of 5', () => {
+    expect(LLM_MAX_CONCURRENCY).toBe(5)
   })
 })

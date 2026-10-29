@@ -18,6 +18,7 @@
 - Empty `message.content` is an error (ignore `reasoning_content` as answer)
 - TDD: failing test → implement → pass → commit per task
 - Work in `/workspace/ontology-use` on `main` (local-only repo, no remote)
+- MiniMax concurrent API calls ≤ **5**; `meta.json` records `maxConcurrency: 5`; keep `runEval` sequential or semaphore-capped
 
 ---
 

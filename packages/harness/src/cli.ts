@@ -3,6 +3,7 @@ import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { allMethods } from '@ontology-use/methods'
 import type { LlmReasoner } from '@ontology-use/reasoners-llm'
+import { LLM_MAX_CONCURRENCY } from '@ontology-use/reasoners-llm'
 import { runEval } from './eval.js'
 import { assertReasonerRunnable, createReasoner } from './createReasoner.js'
 
@@ -83,6 +84,7 @@ async function main() {
       baseUrl,
       model,
       startedAt,
+      maxConcurrency: LLM_MAX_CONCURRENCY,
     }
     if (
       reasoner &&

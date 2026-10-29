@@ -6,3 +6,6 @@ results/**/*.json
 results/**/*.md
 !results/.gitkeep
 !results/strict/.gitkeep
+
+# LLM eval outputs (results/llm-<stamp>/latest.{md,json}, meta.json).
+# Covered by results/**/*.json and results/**/*.md above — do not commit live scores.

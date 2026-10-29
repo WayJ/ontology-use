@@ -40,7 +40,8 @@ Verified 2026-10-29: key present, HTTP 200 from `api.minimax.cn`.
    - CLI: if `--reasoner=llm` and `--out` omitted, default `results/llm-<ISO-ish-runid>/` (never `results/` or `results/strict/`).
    - Record run metadata in `latest.json` (or sibling `meta.json`): model, baseURL host (not key), timestamp, token usage totals if available.
 4. Methods: unchanged; they already skip mock-shortcut when `reasoner.id !== 'mock'`.
-5. Cost / usage: sum `usage.prompt_tokens` / `completion_tokens` / `total_tokens` across calls when present; write into run meta. No billing API.
+5. **Concurrency hard cap:** MiniMax concurrent `complete()` calls must never exceed **5** (user constraint). Current `runEval` is strictly sequential (nested `for` + `await`) so live concurrency is 1. Do not introduce `Promise.all` over methods/tasks without a semaphore ≤5. Record `maxConcurrency: 5` in `meta.json`.
+6. Cost / usage: sum `usage.prompt_tokens` / `completion_tokens` / `total_tokens` across calls when present; write into run meta. No billing API.
 
 ## Error handling
 

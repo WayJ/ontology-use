@@ -1,0 +1,10 @@
+{
+  "id": "t007",
+  "type": "set",
+  "question": "List individuals of class http://example.org/ou/Organization",
+  "gold": [
+    "http://example.org/ou/Acme",
+    "http://example.org/ou/Beta"
+  ],
+  "ontologyRefs": ["ontology/mini.ttl"]
+}

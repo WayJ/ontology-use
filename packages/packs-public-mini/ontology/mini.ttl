@@ -22,5 +22,12 @@ ou:bob a ou:Person ;
   rdfs:label "Bob" ;
   ou:worksAt ou:Acme .
 
+ou:carol a ou:Person ;
+  rdfs:label "Carol" ;
+  ou:worksAt ou:Beta .
+
 ou:Acme a ou:Organization ;
   rdfs:label "Acme Corp" .
+
+ou:Beta a ou:Organization ;
+  rdfs:label "Beta Inc" .

@@ -1,0 +1,7 @@
+{
+  "id": "t006",
+  "type": "exact",
+  "question": "What is the rdfs:label of http://example.org/ou/Acme?",
+  "gold": "Acme Corp",
+  "ontologyRefs": ["ontology/mini.ttl"]
+}

@@ -40,6 +40,7 @@ npm run eval -- --reasoner=llm
 - `packages/reasoners-llm` — MiniMax CN chat reasoner (`createLlmReasoner`)
 - `packages/packs-public-mini` — default-enabled mini pack
 - `packages/packs-public-foaf-lite` — FOAF-inspired lite pack (enabled)
+- `packages/packs-public-org-lite` — org/employee/role lite pack (enabled)
 - `packages/packs-industrial-park` — optional add-on (`enabled: false`, not in default eval)
 - `packages/methods` — M0–M10 runners
 - `packages/harness` — load → run → score → write

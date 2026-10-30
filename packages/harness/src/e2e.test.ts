@@ -22,15 +22,16 @@ describe('e2e mock eval', () => {
     await rm(outDir, { recursive: true, force: true })
   })
 
-  it('loads public-mini and foaf-lite; results for all 11 methods', async () => {
+  it('loads three public packs; results for all 11 methods; ≥16 tasks', async () => {
     const packs = await loadEnabledPacks(packsRoot)
     const packIds = packs.map((p) => p.packId).sort()
     expect(packIds).toContain('public-mini')
     expect(packIds).toContain('public-foaf-lite')
+    expect(packIds).toContain('public-org-lite')
     expect(packs.some((p) => p.packId === 'industrial-park')).toBe(false)
 
     const taskCount = packs.reduce((n, p) => n + p.tasks.length, 0)
-    expect(taskCount).toBeGreaterThanOrEqual(8)
+    expect(taskCount).toBeGreaterThanOrEqual(16)
 
     const methods = allMethods({ strictMock: false })
     expect(methods).toHaveLength(11)

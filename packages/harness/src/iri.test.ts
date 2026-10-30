@@ -44,6 +44,28 @@ describe('expandCompactIri', () => {
   it('leaves unknown prefix unchanged', () => {
     expect(expandCompactIri('ex:Thing')).toBe('ex:Thing')
   })
+
+  it('expands each segment of comma-joined compact IRIs', () => {
+    expect(expandCompactIri('fl:alice,fl:carol')).toBe(
+      'http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol',
+    )
+  })
+
+  it('expands comma-joined mixed compact and already-expanded segments', () => {
+    expect(
+      expandCompactIri(
+        'fl:alice,http://example.org/foaf-lite/carol',
+      ),
+    ).toBe(
+      'http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol',
+    )
+  })
+
+  it('trims spaces around comma segments', () => {
+    expect(expandCompactIri('fl:alice, fl:carol')).toBe(
+      'http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol',
+    )
+  })
 })
 
 describe('expandValue', () => {

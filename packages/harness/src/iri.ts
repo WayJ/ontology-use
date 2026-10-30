@@ -16,15 +16,29 @@ export function parsePrefixMap(ontologyText: string): Record<string, string> {
 
 const COMPACT = /^([A-Za-z_][\w-]*):(\S+)$/
 
-export function expandCompactIri(
+function expandOneCompactIri(
   s: string,
-  map: Record<string, string> = { ...DEFAULT_PREFIX_MAP },
+  map: Record<string, string>,
 ): string {
   const m = COMPACT.exec(s)
   if (!m) return s
   const base = map[m[1]!]
   if (!base) return s
   return base + m[2]!
+}
+
+/** Expand compact IRIs; comma-joined values (e.g. fields objectIds) expand per segment. */
+export function expandCompactIri(
+  s: string,
+  map: Record<string, string> = { ...DEFAULT_PREFIX_MAP },
+): string {
+  if (s.includes(',')) {
+    return s
+      .split(',')
+      .map((part) => expandOneCompactIri(part.trim(), map))
+      .join(',')
+  }
+  return expandOneCompactIri(s, map)
 }
 
 export function expandValue(

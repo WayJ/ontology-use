@@ -98,6 +98,22 @@ describe('scoreAnswer', () => {
     ).toEqual({ ok: true, score: 1 })
   })
 
+  it('fields: comma-joined compact objectIds vs expanded gold → 1', () => {
+    const t = task({
+      type: 'fields',
+      gold: {
+        action: 'Introduce',
+        objectIds:
+          'http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol',
+      },
+    })
+    expect(
+      scoreAnswer(t, {
+        value: { action: 'Introduce', objectIds: 'fl:alice,fl:carol' },
+      }),
+    ).toEqual({ ok: true, score: 1 })
+  })
+
   it('unknown compact prefix does not falsely match expanded gold', () => {
     const t = task({ type: 'exact', gold: 'http://example.org/ou/Person' })
     expect(scoreAnswer(t, { value: 'ex:Person' })).toEqual({

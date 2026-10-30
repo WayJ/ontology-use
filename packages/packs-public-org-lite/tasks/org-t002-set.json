@@ -1,0 +1,10 @@
+{
+  "id": "org-t002",
+  "type": "set",
+  "question": "Which Employee individuals ol:memberOf http://example.org/org-lite/AcmeOrg?",
+  "gold": [
+    "http://example.org/org-lite/alice",
+    "http://example.org/org-lite/bob"
+  ],
+  "ontologyRefs": ["ontology/org-lite.ttl"]
+}

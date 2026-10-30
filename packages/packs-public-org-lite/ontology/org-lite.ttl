@@ -1,0 +1,54 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ol: <http://example.org/org-lite/> .
+
+ol:Organization a owl:Class ;
+  rdfs:label "Organization" .
+
+ol:Employee a owl:Class ;
+  rdfs:label "Employee" .
+
+ol:Role a owl:Class ;
+  rdfs:label "Role" .
+
+ol:memberOf a owl:ObjectProperty ;
+  rdfs:domain ol:Employee ;
+  rdfs:range ol:Organization ;
+  rdfs:label "member of" .
+
+ol:holdsRole a owl:ObjectProperty ;
+  rdfs:domain ol:Employee ;
+  rdfs:range ol:Role ;
+  rdfs:label "holds role" .
+
+ol:name a owl:DatatypeProperty ;
+  rdfs:range rdfs:Literal ;
+  rdfs:label "name" .
+
+ol:AcmeOrg a ol:Organization ;
+  ol:name "Acme Org" .
+
+ol:BetaOrg a ol:Organization ;
+  ol:name "Beta Org" .
+
+ol:Engineer a ol:Role ;
+  ol:name "Engineer" .
+
+ol:Manager a ol:Role ;
+  ol:name "Manager" .
+
+ol:alice a ol:Employee ;
+  ol:name "Alice" ;
+  ol:memberOf ol:AcmeOrg ;
+  ol:holdsRole ol:Engineer .
+
+ol:bob a ol:Employee ;
+  ol:name "Bob" ;
+  ol:memberOf ol:AcmeOrg ;
+  ol:holdsRole ol:Manager .
+
+ol:carol a ol:Employee ;
+  ol:name "Carol" ;
+  ol:memberOf ol:BetaOrg ;
+  ol:holdsRole ol:Engineer .

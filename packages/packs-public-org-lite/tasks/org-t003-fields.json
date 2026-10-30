@@ -1,0 +1,10 @@
+{
+  "id": "org-t003",
+  "type": "fields",
+  "question": "Propose an ActionSDK call to assign http://example.org/org-lite/alice as memberOf organization http://example.org/org-lite/AcmeOrg",
+  "gold": {
+    "action": "AssignMemberOf",
+    "objectIds": "http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg"
+  },
+  "ontologyRefs": ["ontology/org-lite.ttl"]
+}

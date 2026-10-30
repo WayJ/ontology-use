@@ -1,0 +1,6 @@
+{
+  "name": "@ontology-use/packs-public-org-lite",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Tiny org/employee/role public pack (example.org IRIs only)"
+}

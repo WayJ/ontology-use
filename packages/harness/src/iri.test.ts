@@ -7,9 +7,10 @@ import {
 } from './iri.js'
 
 describe('DEFAULT_PREFIX_MAP', () => {
-  it('includes ou and fl pack defaults', () => {
+  it('includes ou, fl, and ol pack defaults', () => {
     expect(DEFAULT_PREFIX_MAP.ou).toBe('http://example.org/ou/')
     expect(DEFAULT_PREFIX_MAP.fl).toBe('http://example.org/foaf-lite/')
+    expect(DEFAULT_PREFIX_MAP.ol).toBe('http://example.org/org-lite/')
   })
 })
 
@@ -64,6 +65,18 @@ describe('expandCompactIri', () => {
   it('trims spaces around comma segments', () => {
     expect(expandCompactIri('fl:alice, fl:carol')).toBe(
       'http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol',
+    )
+  })
+
+  it('expands ol:Employee with defaults', () => {
+    expect(expandCompactIri('ol:Employee')).toBe(
+      'http://example.org/org-lite/Employee',
+    )
+  })
+
+  it('expands each segment of comma-joined ol: IRIs', () => {
+    expect(expandCompactIri('ol:alice,ol:AcmeOrg')).toBe(
+      'http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg',
     )
   })
 })

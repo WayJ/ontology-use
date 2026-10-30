@@ -1,6 +1,7 @@
 export const DEFAULT_PREFIX_MAP: Readonly<Record<string, string>> = {
   ou: 'http://example.org/ou/',
   fl: 'http://example.org/foaf-lite/',
+  ol: 'http://example.org/org-lite/',
 }
 
 const PREFIX_LINE =

@@ -27,4 +27,8 @@ fl:bob a fl:Person ;
   fl:knows fl:carol .
 
 fl:carol a fl:Person ;
-  fl:name "Carol" .
+  fl:name "Carol" ;
+  fl:knows fl:dave .
+
+fl:dave a fl:Person ;
+  fl:name "Dave" .

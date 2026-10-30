@@ -1,0 +1,7 @@
+{
+  "id": "foaf-t004",
+  "type": "exact",
+  "question": "What is the fl:name of http://example.org/foaf-lite/carol?",
+  "gold": "Carol",
+  "ontologyRefs": ["ontology/foaf-lite.ttl"]
+}

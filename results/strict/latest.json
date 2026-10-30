@@ -3,528 +3,1408 @@
     "methodId": "M0",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:11dcf248ce89c7cd\"",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:40ab055186f46312\"",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:3ea38695073ac173\"",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:afdd1c358b8ffb71\"",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:5bd422a3b5ed9f50\"",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:b4bce954f1fe0f90\"",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"\"",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:19a3d73b02813ad2\"",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:4978bbd06423a368\"",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:6813eca0e58eeeb8\"",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "foaf-t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:603dbaa76310c315\"",
+    "rawLength": 21
   },
   {
     "methodId": "M0",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:9d8dbf87c81e970c\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:a8d2817a4d231344\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:b9d0c2c40a3b98e3\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:bf74f0c2b5744eaa\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:db2479f53b4f373a\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:fc4eee927139866e\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[]",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:a953638e56a269a9\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:c384cbafac9afcb3\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:7ce4e5b76f65db8e\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "foaf-t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:27a9af2f9cd0b1df\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M0",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:c3d1061f52623503\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:85731785a4507117\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:82e30087a2dc374e\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:c7625e0f0f691623\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:956ceb9f70135635\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:52836e47405c2119\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{}",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:61e0a06eecaab6c1\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:c41d915b06cdf855\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:f53468d68a502cae\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "foaf-t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:7b9544464d8ac6ba\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:9672835f515fd690\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:8f79b364d3fde789\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:b79667c54fb7a98b\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:b6a425ddaa949b32\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:ce7ac4d9f3f2606a\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:ade2b0f68ec15c5d\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:e75aac026703ac18\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:362f93a8648cb5bf\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:a95dd8999b9626f0\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "foaf-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:5ee3fae45abfea07\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:8ce281cad4517e8a\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:67d7ee607cebd5b3\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:3bf02081c5a5b1b1\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:10166390649909b1\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:edfe4e72212add21\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:5ed6ae413f999951\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:27e30112e2edf593\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:b71d5d952d074469\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:f2fbfd5264b0a427\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "foaf-t005",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:2b4fa0001ed2b898\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M0",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:f2e8c7b9eadcac97\"",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:7c725eebb40a8326\"",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:9c9b7ea10528535f\"",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:0b4ac2856492b7c9\"",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:f8e3f360ef260c94\"",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:84f7ba9ef228851b\"",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"\"",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:9c2bcfd5bf7fd210\"",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:24062c1fbdbdd408\"",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:0e8aa9b8f2a46726\"",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "t001",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:9ea1f9af76974355\"",
+    "rawLength": 21
   },
   {
     "methodId": "M0",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:e8b9ad08172839e9\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:687708519df3a5b4\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:d25f33fab943af89\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:b45a15df59662301\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:4b7ff20d9ba160c3\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:ce37afe839bbf9d5\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[]",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:962d0e60d253118b\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:934a548b9ad802dd\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:16423c39e7ba946a\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "t002",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:e8b45bafd16faab1\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M0",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:cb3c07f6353d7af9\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:954ffcd11b50c30e\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:5aa69ed8badf4e01\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:2973314cc57d65c8\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:143869dfe82f5cda\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:4d99de654eefb35d\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{}",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:636ad2701528b5af\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:9a970a7d05cc1b29\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:305f448b6a81aa61\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "t003",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:5d960cff411e25d3\"}",
+    "rawLength": 21
   },
   {
     "methodId": "M0",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:bc91ea823e35fce7\"",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:c2dd8eadb803bc78\"",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:023930b93e693015\"",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:f79a86eff227eefa\"",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:2380108dd9e5bac6\"",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:623d1215184ffbcb\"",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"\"",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:b6f38c7c1be5851d\"",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:03f4a7ac933b0668\"",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:2bb1251d27ebf600\"",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "t004",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "\"MOCK:1cdd61f487db55b2\"",
+    "rawLength": 21
   },
   {
     "methodId": "M0",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:dffca4cb76ed9c81\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M1",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:015559f3c12d5c52\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M2",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:fcc9dcbc32825c5e\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M3",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:12d082ab7a6e15fa\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M4",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:c808f7a6dd4ab98e\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M5",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:f36a450f039b3e66\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M6",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[]",
+    "rawLength": 21
   },
   {
     "methodId": "M7",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:9488953f1174cdf7\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M8",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:da0c204f2f1248a7\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M9",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:033ab4e8f466269b\"]",
+    "rawLength": 21
   },
   {
     "methodId": "M10",
     "taskId": "t005",
     "ok": false,
-    "score": 0
+    "score": 0,
+    "answerPreview": "[\"MOCK:e9f409822bf739e0\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:750879d4cb8f5728\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:8db59ea5b7627946\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:f0ce36f10c5a289f\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:c9bbdda054109e4c\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:9e828a08910123d6\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:73a02ed9ec68e645\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:827ef2cc8a25f19f\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:d458ffc4b90303a1\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:4d4a48ccd4589e66\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "t006",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:3d9273212794081c\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:2847fbd5c2d58e59\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:b6a9b2140627614d\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:e63645c05af2cf7b\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:47403607ff8e4090\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:3566312f8313f02d\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:19761d6927d8a3ca\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:04069743e2199190\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:eaca2001beeee0b0\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:6315a8ffd8133a4e\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "t007",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:fd1ff084fdc136aa\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:278c581a85602a2c\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:937178c06bcb8ceb\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:f17606750cf5f59b\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:ed0f4eecefbbd49b\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:6113249f66f9af03\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:12b0bff882c18934\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:78f52b03eb83c9c0\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:8631f7d83e8b5aa5\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:947532ad8a05b6ea\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t001",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "\"MOCK:40ad535c1d8ffd1a\"",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:89ef066fa4609bae\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:dff4e572316e0ce3\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:304aea73d9b19f19\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:80540d5760e0e09e\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:1429040269aa1e5f\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:8cfc7f8e91bc90ee\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:d8d130ad3c829332\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:865cf8764fdd9ded\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:65cc7dc71da837c8\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t002",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:2e1b2f1115f11b06\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:2f849f2d1b807ca4\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:112de1c1b53e5b06\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:7a36cc83c8748060\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:c88edc1d1504f210\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:87bca0e5f341b870\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:aff51bb3303491fd\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:a36aa85105f62e7e\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:b7a68d27905f47b1\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:9660194387e677e3\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t003",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "{\"value\":\"MOCK:a8ba7253c5db0d5c\"}",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:74ae9ed5f9fdc9d0\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:33c3b872ecda3b6a\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:1b2115cce11378f4\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:ef45e0c851bb1aa8\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:cd6d3d16ad509721\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:e2a9384be8a4fb1c\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:c1093c23d133b0e1\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:42afa913439b2051\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:b880305b03f9a047\"]",
+    "rawLength": 21
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t004",
+    "ok": false,
+    "score": 0,
+    "answerPreview": "[\"MOCK:7e971741fcbd4f15\"]",
+    "rawLength": 21
   }
 ]

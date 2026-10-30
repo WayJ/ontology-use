@@ -3,528 +3,1232 @@
     "methodId": "M0",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M1",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M2",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M3",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M4",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M5",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M6",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M7",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M8",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M9",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M10",
     "taskId": "foaf-t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"Alice\""
   },
   {
     "methodId": "M0",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M1",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M2",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M3",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M4",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M5",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M6",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M7",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M8",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M9",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M10",
     "taskId": "foaf-t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/foaf-lite/alice\",\"http://example.org/foaf-lite/bob\",\"http://example.org/foaf-lite/carol\"]"
   },
   {
     "methodId": "M0",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M1",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M2",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M3",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M4",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M5",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M6",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M7",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M8",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M9",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
   },
   {
     "methodId": "M10",
     "taskId": "foaf-t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/alice,http://example.org/foaf-lite/carol\"}"
+  },
+  {
+    "methodId": "M0",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M1",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M2",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M3",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M4",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M5",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M6",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M7",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M8",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M9",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M10",
+    "taskId": "foaf-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Carol\""
+  },
+  {
+    "methodId": "M0",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M1",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M2",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M3",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M4",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M5",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M6",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M7",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M8",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M9",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
+  },
+  {
+    "methodId": "M10",
+    "taskId": "foaf-t005",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"Introduce\",\"objectIds\":\"http://example.org/foaf-lite/bob,http://example.org/foaf-lite/dave\"}"
   },
   {
     "methodId": "M0",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M1",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M2",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M3",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M4",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M5",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M6",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M7",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M8",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M9",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M10",
     "taskId": "t001",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Person\""
   },
   {
     "methodId": "M0",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M1",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M2",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M3",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M4",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M5",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M6",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M7",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M8",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M9",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M10",
     "taskId": "t002",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M0",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M1",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M2",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M3",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M4",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M5",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M6",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M7",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M8",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M9",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M10",
     "taskId": "t003",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignWorksAt\",\"objectIds\":\"http://example.org/ou/alice,http://example.org/ou/Acme\"}"
   },
   {
     "methodId": "M0",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M1",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M2",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M3",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M4",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M5",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M6",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M7",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M8",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M9",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M10",
     "taskId": "t004",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "\"http://example.org/ou/Organization\""
   },
   {
     "methodId": "M0",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M1",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M2",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M3",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M4",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M5",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M6",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M7",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M8",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M9",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
   },
   {
     "methodId": "M10",
     "taskId": "t005",
     "ok": true,
-    "score": 1
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/alice\",\"http://example.org/ou/bob\"]"
+  },
+  {
+    "methodId": "M0",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M1",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M2",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M3",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M4",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M5",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M6",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M7",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M8",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M9",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M10",
+    "taskId": "t006",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"Acme Corp\""
+  },
+  {
+    "methodId": "M0",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M1",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M2",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M3",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M4",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M5",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M6",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M7",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M8",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M9",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M10",
+    "taskId": "t007",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/ou/Acme\",\"http://example.org/ou/Beta\"]"
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t001",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "\"http://example.org/org-lite/Employee\""
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t002",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/bob\"]"
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t003",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "{\"action\":\"AssignMemberOf\",\"objectIds\":\"http://example.org/org-lite/alice,http://example.org/org-lite/AcmeOrg\"}"
+  },
+  {
+    "methodId": "M0",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M1",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M2",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M3",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M4",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M5",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M6",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M7",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M8",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M9",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
+  },
+  {
+    "methodId": "M10",
+    "taskId": "org-t004",
+    "ok": true,
+    "score": 1,
+    "answerPreview": "[\"http://example.org/org-lite/alice\",\"http://example.org/org-lite/carol\"]"
   }
 ]

@@ -65,27 +65,28 @@
 - **Provider / endpoint：** `https://api.minimax.cn/v1`（OpenAI-compatible chat/completions）
 - **Model：** `MiniMax-M3.1-Flash`
 - **Concurrency：** hard cap `maxConcurrency: 5`（当前 `runEval` 串行，live = 1）；勿无信号量并行
-- **输出目录（本轮磁盘）：** `results/llm-20261029T222608/`（`latest.md` / `latest.json` / `meta.json`；**不入库**，见 `.gitignore`）
-- **meta.json（本轮）：** `usageTotals` prompt_tokens=29562, completion_tokens=74656, total_tokens=104218；`maxConcurrency: 5`
+- **输出目录（本轮磁盘）：** `results/llm-20261029T231459/`（`latest.md` / `latest.json` / `meta.json`；**不入库**，见 `.gitignore`）
+- **meta.json（本轮）：** `usageTotals` prompt_tokens=32486, completion_tokens=90363, total_tokens=122849；`maxConcurrency: 5`；`startedAt` 2026-10-29T15:14:59.983Z
+- **对照旧跑：** `results/llm-20261029T222608/` 为 prompt/IRI 调优与 `max_completion_tokens=4096` **之前**的基线（多数方法 ≈0–0.125），勿与本表混用。
 
-摘录（来自该目录 `latest.md`，**不是** mock-shortcut，可用于方法对照；分数仍偏低，提示/解析尚粗）：
+摘录（来自本轮 `latest.md`，**不是** mock-shortcut，可用于方法对照）：
 
 | method | avg score | tasks | failures |
 | --- | ---: | ---: | ---: |
-| M0 | 0.1250 | 8 | 7 |
-| M1 | 0.0000 | 8 | 8 |
-| M2 | 0.0000 | 8 | 8 |
-| M3 | 0.0000 | 8 | 8 |
-| M4 | 0.0000 | 8 | 8 |
-| M5 | 0.1250 | 8 | 7 |
+| M0 | 0.9375 | 8 | 1 |
+| M1 | 0.6875 | 8 | 3 |
+| M2 | 0.5208 | 8 | 5 |
+| M3 | 0.6250 | 8 | 4 |
+| M4 | 0.5000 | 8 | 5 |
+| M5 | 0.3542 | 8 | 7 |
 | M6 | 0.1250 | 8 | 7 |
-| M7 | 0.1250 | 8 | 7 |
-| M8 | 0.0000 | 8 | 8 |
-| M9 | 0.0000 | 8 | 8 |
-| M10 | 0.1250 | 8 | 7 |
+| M7 | 0.5208 | 8 | 5 |
+| M8 | 0.3125 | 8 | 6 |
+| M9 | 0.4375 | 8 | 5 |
+| M10 | 0.9375 | 8 | 1 |
 
-行数：88（11×8）。部分失败为 empty `message.content`（thinking 占满 completion）；当时默认 `max_completion_tokens=2048`（代码现已默认 **4096**，仍可用环境变量覆盖）。**prompt/IRI 调优后请再跑** `npm run eval -- --reasoner=llm` 写入新的 `results/llm-<stamp>/`，再改本节数字；勿用旧表冒充调优后成绩，勿手填。
+行数：88（11×8）。本轮在 `feat/llm-prompt-iri-tune` 上：输出契约 footer、解析加固、默认 `max_completion_tokens=4096`。领先为 **M0 PromptDump** 与 **M10 ActionSDK**（均为 0.9375）；**M6 SHACLGate** 仍最低（0.1250）。单次跑、单模型，不作跨厂商泛化结论。
 
 ## 4.5 后续
 
-更大公开本体包、工业园 add-on 启用、提示工程与解析加固：待实现后再引用新表。
+更大公开本体包、工业园 add-on 启用、多模型复跑与成本/延迟指标：待实现后再引用新表。

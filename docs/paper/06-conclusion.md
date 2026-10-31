@@ -4,8 +4,8 @@
 
 **已证实（仅基于当前磁盘结果）：**
 
-1. `npm run eval` 下 M0–M10 在 **8** 个任务上平均分均为 **1.0000**、failures **0**（mock-shortcut 烟测；public-mini + foaf-lite）。
-2. `npm run eval:strict` 下平均分均为 **0.0000**、每方法 failures **8**（无捷径 + 空 fixtures）。
+1. `npm run eval` 下 M0–M10 在 **16** 个任务上平均分均为 **1.0000**、failures **0**（mock-shortcut 烟测；public-mini + foaf-lite + org-lite）。
+2. `npm run eval:strict` 下平均分均为 **0.0000**、每方法 failures **16**（无捷径 + 空 fixtures）。
 3. `npm run eval -- --reasoner=llm`（MiniMax-M3.1-Flash @ api.minimax.cn）调优后写入 `results/llm-20261029T231459/`：**88** 行；领先为 **M0 / M10 = 0.9375**，**M6 = 0.1250**，方法均分约 **0.54**；`meta.json` 含 usage（total_tokens=122849）与 `maxConcurrency: 5`。调优前基线见 `results/llm-20261029T222608/`，勿混用。
 
 **推荐用法：**

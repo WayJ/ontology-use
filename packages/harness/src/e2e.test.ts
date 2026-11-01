@@ -56,6 +56,9 @@ describe('e2e mock eval', () => {
     for (const id of methodIds) {
       expect(md).toContain(`| ${id} |`)
     }
+    expect(md).toContain('avgExact')
+    expect(md).toContain('avgSet')
+    expect(md).toContain('avgFields')
     JSON.parse(await readFile(join(outDir, 'latest.json'), 'utf8'))
   })
 })

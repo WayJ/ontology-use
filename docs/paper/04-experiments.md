@@ -59,38 +59,35 @@
 
 解读：严格模式全员 0 分、每方法 16 次失败计数——说明捷径已关闭，打分器在拒绝错误答案；**仍不能**解释为某方法「更差」，因尚未接入真实 LLM。
 
-## 4.4 LLM run（MiniMax CN）
+## 4.4 LLM run（MiniMax CN，16 任务）
 
 命令：`npm run eval -- --reasoner=llm`（需环境变量 `MINIMAX_API_KEY`；可选 `MINIMAX_BASE_URL` / `MINIMAX_MODEL`）
 
 - **Provider / endpoint：** `https://api.minimax.cn/v1`（OpenAI-compatible chat/completions）
 - **Model：** `MiniMax-M3.1-Flash`
-- **Concurrency：** hard cap `maxConcurrency: 5`（当前 `runEval` 串行，live = 1）；勿无信号量并行
-- **输出目录（本轮磁盘）：** `results/llm-20261029T231459/`（`latest.md` / `latest.json` / `meta.json`；**不入库**，见 `.gitignore`）
-- **meta.json（本轮）：** `usageTotals` prompt_tokens=32486, completion_tokens=90363, total_tokens=122849；`maxConcurrency: 5`；`startedAt` 2026-10-29T15:14:59.983Z
-- **对照旧跑：** `results/llm-20261029T222608/` 为 prompt/IRI 调优与 `max_completion_tokens=4096` **之前**的基线（多数方法 ≈0–0.125），勿与本表混用。
+- **Concurrency：** hard cap `maxConcurrency: 5`（当前 `runEval` 串行，live = 1）；勿用信号量并行
+- **输出目录（本轮磁盘）：** `results/llm-20261101T074243/`（`latest.md` / `latest.json` / `meta.json`；**不入库**，见 `.gitignore`）
+- **meta.json（本轮）：** `usageTotals` prompt_tokens=68438, completion_tokens=152924, total_tokens=221362；`maxConcurrency: 5`；`startedAt` 2026-10-31T23:42:43.856Z
+- **历史对照：** `results/llm-20261029T231459/` 为扩 pack **之前**的 8 任务调优跑（方法均分约 0.54）；`results/llm-20261029T222608/` 为调优前基线。勿与本表混用。
 
 摘录（来自本轮 `latest.md`，**不是** mock-shortcut，可用于方法对照）：
 
 | method | avg score | tasks | failures |
 | --- | ---: | ---: | ---: |
-| M0 | 0.9375 | 8 | 1 |
-| M1 | 0.6875 | 8 | 3 |
-| M2 | 0.5208 | 8 | 5 |
-| M3 | 0.6250 | 8 | 4 |
-| M4 | 0.5000 | 8 | 5 |
-| M5 | 0.3542 | 8 | 7 |
-| M6 | 0.1250 | 8 | 7 |
-| M7 | 0.5208 | 8 | 5 |
-| M8 | 0.3125 | 8 | 6 |
-| M9 | 0.4375 | 8 | 5 |
-| M10 | 0.9375 | 8 | 1 |
+| M0 | 0.8848 | 16 | 5 |
+| M1 | 0.4562 | 16 | 11 |
+| M2 | 0.4375 | 16 | 10 |
+| M3 | 0.7083 | 16 | 7 |
+| M4 | 0.5000 | 16 | 9 |
+| M5 | 0.5000 | 16 | 11 |
+| M6 | 0.1875 | 16 | 13 |
+| M7 | 0.4271 | 16 | 11 |
+| M8 | 0.3125 | 16 | 11 |
+| M9 | 0.3750 | 16 | 11 |
+| M10 | 0.9161 | 16 | 4 |
 
-行数：88（11×8）。本轮在 `feat/llm-prompt-iri-tune` 上：输出契约 footer、解析加固、默认 `max_completion_tokens=4096`。领先为 **M0 PromptDump** 与 **M10 ActionSDK**（均为 0.9375）；**M6 SHACLGate** 仍最低（0.1250）。单次跑、单模型，不作跨厂商泛化结论。
-
-> **Pack 增长说明（本仓库后续）：** 默认公开 pack 已扩至 **16** 任务（+`public-org-lite` 等；见 §4.1）。上表仍为扩 pack **之前**的 8 任务 MiniMax 跑（`results/llm-20261029T231459/`），**未**在 16 任务集上复跑；勿把上表 tasks=8 与当前默认 mock 的 16 任务混为同一次评测。
-
+行数：176（11×16）。本轮在默认 16 任务公开 pack（mini + foaf-lite + org-lite）上。领先为 **M10 ActionSDK**（0.9161）与 **M0 PromptDump**（0.8848），其次 **M3 GraphRAG**（0.7083）；**M6 SHACLGate** 仍最低（0.1875）。方法均分约 **0.52**。单次跑、单模型，不作跨厂商泛化结论。
 
 ## 4.5 后续
 
-默认公开 pack 已扩至 16 任务（mini 7 + foaf-lite 5 + org-lite 4）。工业园 add-on 启用、16 任务集上的 MiniMax/多模型复跑与成本/延迟指标：待实现后再引用新表。
+工业园 add-on 启用、多模型复跑与按方法拆分的成本/延迟指标：待实现后再引用新表。仓发布到 Origin / GitHub 仍待确认。

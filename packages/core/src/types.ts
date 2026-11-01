@@ -17,6 +17,8 @@ export type Task = {
   question: string
   gold: string | string[] | Record<string, string>
   ontologyRefs?: string[]
+  /** Provenance / source refs; not used by scoreAnswer */
+  evidence?: string | string[]
 }
 
 export type Answer = {
@@ -45,6 +47,10 @@ export type ScoreResult = {
   answerPreview?: string
   /** Length of raw reasoner completion when available */
   rawLength?: number
+  /** Copied from task.type at score time */
+  taskType: 'exact' | 'set' | 'fields'
+  /** Copied from task.evidence when present; not scored */
+  evidence?: string | string[]
 }
 
 const METHOD_IDS: readonly MethodId[] = [

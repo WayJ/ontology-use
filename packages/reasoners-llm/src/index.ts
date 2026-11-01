@@ -81,14 +81,28 @@ export function createLlmReasoner(opts?: LlmReasonerOptions): LlmReasoner {
         body.max_completion_tokens = maxCompletionTokens
       }
 
-      const res = await fetchImpl(url, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-      })
+      const controller = new AbortController()
+      const timeoutMs = Number(process.env.MINIMAX_FETCH_TIMEOUT_MS ?? 120_000)
+      const timer = setTimeout(() => controller.abort(), timeoutMs)
+      let res: Response
+      try {
+        res = await fetchImpl(url, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(body),
+          signal: controller.signal,
+        })
+      } catch (err) {
+        if (err instanceof Error && err.name === 'AbortError') {
+          throw new Error(`MiniMax chat/completions timed out after ${timeoutMs}ms`)
+        }
+        throw err
+      } finally {
+        clearTimeout(timer)
+      }
 
       const rawText = await res.text()
       if (!res.ok) {

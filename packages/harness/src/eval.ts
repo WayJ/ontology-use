@@ -33,6 +33,7 @@ export async function runEval(opts: RunEvalOpts): Promise<ScoreResult[]> {
     for (const task of pack.tasks) {
       for (const method of opts.methods) {
         try {
+          console.error(`[eval] ${method.id} ${task.id}`)
           const answer = await method.run(task, opts.reasoner)
           const { ok, score } = scoreAnswer(task, answer)
           const row: ScoreResult = {

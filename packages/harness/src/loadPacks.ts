@@ -14,15 +14,27 @@ type Manifest = {
   title?: string
 }
 
+function isEvidence(value: unknown): value is string | string[] {
+  if (typeof value === 'string') return true
+  if (!Array.isArray(value)) return false
+  return value.every((item) => typeof item === 'string')
+}
+
 function isTask(value: unknown): value is Task {
   if (!value || typeof value !== 'object') return false
   const t = value as Record<string, unknown>
-  return (
-    typeof t.id === 'string' &&
-    (t.type === 'exact' || t.type === 'set' || t.type === 'fields') &&
-    typeof t.question === 'string' &&
-    'gold' in t
-  )
+  if (
+    typeof t.id !== 'string' ||
+    (t.type !== 'exact' && t.type !== 'set' && t.type !== 'fields') ||
+    typeof t.question !== 'string' ||
+    !('gold' in t)
+  ) {
+    return false
+  }
+  if ('evidence' in t && t.evidence !== undefined && !isEvidence(t.evidence)) {
+    return false
+  }
+  return true
 }
 
 function resolveOntologyRefs(packDir: string, refs: string[] | undefined): string[] | undefined {

@@ -87,4 +87,47 @@ describe('loadEnabledPacks', () => {
     expect(refs[0]!).toContain(join('packs-public-mini', 'ontology', 'mini.ttl'))
     await access(refs[0]!)
   })
+
+  it('accepts optional evidence as string or string[]', async () => {
+    await writeFile(
+      join(root, 'packs-public-mini', 'tasks', 't003-evidence.json'),
+      JSON.stringify({
+        id: 't003',
+        type: 'exact',
+        question: 'With evidence?',
+        gold: 'http://example.org/ou/Person',
+        evidence: 'mini.ttl#alice',
+        ontologyRefs: ['ontology/mini.ttl'],
+      }),
+    )
+    await writeFile(
+      join(root, 'packs-public-mini', 'tasks', 't004-evidence-arr.json'),
+      JSON.stringify({
+        id: 't004',
+        type: 'set',
+        question: 'With evidence array?',
+        gold: ['http://example.org/ou/alice'],
+        evidence: ['mini.ttl#alice', 'mini.ttl#Person'],
+        ontologyRefs: ['ontology/mini.ttl'],
+      }),
+    )
+    const packs = await loadEnabledPacks(root)
+    const byId = Object.fromEntries(packs[0]!.tasks.map((t) => [t.id, t]))
+    expect(byId.t003!.evidence).toBe('mini.ttl#alice')
+    expect(byId.t004!.evidence).toEqual(['mini.ttl#alice', 'mini.ttl#Person'])
+  })
+
+  it('rejects tasks whose evidence is not string or string[]', async () => {
+    await writeFile(
+      join(root, 'packs-public-mini', 'tasks', 't-bad-evidence.json'),
+      JSON.stringify({
+        id: 't-bad',
+        type: 'exact',
+        question: 'bad',
+        gold: 'x',
+        evidence: { page: 1 },
+      }),
+    )
+    await expect(loadEnabledPacks(root)).rejects.toThrow(/Invalid task/)
+  })
 })

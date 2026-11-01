@@ -41,20 +41,25 @@ export async function runEval(opts: RunEvalOpts): Promise<ScoreResult[]> {
             taskId: task.id,
             ok,
             score,
+            taskType: task.type,
             answerPreview: previewAnswer(answer.value),
             rawLength: rawLengthFromMeta(answer.meta),
           }
+          if (task.evidence !== undefined) row.evidence = task.evidence
           if (row.rawLength === undefined) delete row.rawLength
           results.push(row)
         } catch (err) {
           const message = err instanceof Error ? err.message : String(err)
-          results.push({
+          const failRow: ScoreResult = {
             methodId: method.id,
             taskId: task.id,
             ok: false,
             score: 0,
             error: message,
-          })
+            taskType: task.type,
+          }
+          if (task.evidence !== undefined) failRow.evidence = task.evidence
+          results.push(failRow)
         }
       }
     }

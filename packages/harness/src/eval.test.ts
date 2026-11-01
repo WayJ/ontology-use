@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, writeFile, rm, readFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { runEval } from './eval.js'
-import type { Method, Reasoner, Task } from '@ontology-use/core'
+import type { Method, Reasoner, Task, ScoreResult } from '@ontology-use/core'
 
 describe('runEval', () => {
   let root: string
@@ -192,4 +192,58 @@ describe('runEval', () => {
     expect(results[0]!.answerPreview).toBeUndefined()
     expect(results[0]!.rawLength).toBeUndefined()
   })
+
+  it('sets taskType on success and error rows; echoes evidence when present', async () => {
+    await writeFile(
+      join(root, 'packs-public-mini', 'tasks', 't002-set.json'),
+      JSON.stringify({
+        id: 't002',
+        type: 'set',
+        question: 'List',
+        gold: ['http://example.org/ou/alice'],
+        evidence: ['mini.ttl#alice'],
+      }),
+    )
+
+    const ok: Method = {
+      id: 'M0',
+      name: 'Ok',
+      async run(task: Task) {
+        return { value: task.gold as string | string[] }
+      },
+    }
+    const boom: Method = {
+      id: 'M1',
+      name: 'Boom',
+      async run() {
+        throw new Error('boom')
+      },
+    }
+    const reasoner: Reasoner = { id: 'mock', async complete() { return '' } }
+
+    const results = await runEval({
+      packsRoot: root,
+      methods: [ok, boom],
+      reasoner,
+      outDir,
+    })
+
+    const okExact = results.find((r) => r.methodId === 'M0' && r.taskId === 't001')
+    const okSet = results.find((r) => r.methodId === 'M0' && r.taskId === 't002')
+    const errSet = results.find((r) => r.methodId === 'M1' && r.taskId === 't002')
+
+    expect(okExact!.taskType).toBe('exact')
+    expect(okExact!.evidence).toBeUndefined()
+    expect(okSet!.taskType).toBe('set')
+    expect(okSet!.evidence).toEqual(['mini.ttl#alice'])
+    expect(errSet!.ok).toBe(false)
+    expect(errSet!.taskType).toBe('set')
+    expect(errSet!.evidence).toEqual(['mini.ttl#alice'])
+
+    const json = JSON.parse(await readFile(join(outDir, 'latest.json'), 'utf8')) as ScoreResult[]
+    const jsonSet = json.find((r) => r.methodId === 'M0' && r.taskId === 't002')
+    expect(jsonSet!.taskType).toBe('set')
+    expect(jsonSet!.evidence).toEqual(['mini.ttl#alice'])
+  })
+
 })

@@ -37,5 +37,6 @@
 ## 状态
 第一期 harness 已落地（2026-10-29）：M0–M10 + public-mini + foaf-lite + **org-lite** + mock/strict + **MiniMax CN LLM** 评测 + 论文骨架。
 默认公开可打分任务 **16**（工业园仍 `enabled: false`）。
+结果表按 `exact` / `set` / `fields` 分桶报均分（`avgExact` / `avgSet` / `avgFields`；无该类型任务时为 `—`）；任务可选 `evidence` 仅作 provenance 透传进 JSON，**不**进入 `scoreAnswer` 主分。
 默认 `npm run eval` 为 mock-shortcut 烟测；`eval:strict` 无捷径；`npm run eval -- --reasoner=llm` 需 `MINIMAX_API_KEY`，默认模型 `MiniMax-M3.1-Flash`、`https://api.minimax.cn/v1`，结果进 `results/llm-<stamp>/`（gitignore；`meta.maxConcurrency: 5`）。
 仓路径：`/workspace/ontology-use`。16 任务 MiniMax LLM 表已出（`results/llm-20261101T074243/`，均分约 0.52）；工业园启用与按方法成本/延迟表仍为后续。仓发布待连 GitHub/Origin。
